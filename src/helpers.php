@@ -1,5 +1,18 @@
 <?php
 
+
+
+if(!class_exists('SuccessType')) {
+    abstract class SuccessType
+    {
+        const Created = 0;
+        const Updated = 1;
+        const Deleted = 1;
+    }
+}
+
+
+
 if (!function_exists("jsend_error")) {
     /**
      * @param string $message Error message
@@ -52,6 +65,35 @@ if (!function_exists("jsend_success")) {
         $response = [
             "status" => "success",
             "data" => $data
+        ];
+
+        return response()->json($response, $status, $extraHeaders);
+    }
+    
+    /**
+     * @param SuccessType $type Successful Type
+     * @param int $status HTTP status code
+     * @param array $extraHeaders
+     * @return \Illuminate\Contracts\Routing\ResponseFactory|\Symfony\Component\HttpFoundation\Response
+     */
+    function jsend_success($type, $status = 200, $extraHeaders = [])
+    {
+        switch($type) {
+            case SuccessType::Created:
+                $message = "Created Successfully";
+                break;
+            case SuccessType::Updated:
+                $message = "Updated Successfully";
+                break;
+            case SuccessType::Deleted:
+                $message = "Deleted Successfully";
+                break;
+        }
+        $response = [
+            "status" => "success",
+            "data" => [
+                "message" => $message
+            ]
         ];
 
         return response()->json($response, $status, $extraHeaders);
