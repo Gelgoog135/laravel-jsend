@@ -42,7 +42,7 @@ if (!function_exists("jsend_fail")) {
      */
     function jsend_fail($type = QueryType::Undefined, $data = null, $status = 400, $extraHeaders = [])
     {
-        if($type != QueryType::Undefined){
+        if($type != QueryType::Undefined && $type != null){
             switch($type) {
                 case QueryType::Create:
                     $data = ["message" => "Created Failed"];
@@ -80,7 +80,7 @@ if (!function_exists("jsend_success")) {
      */
     function jsend_success($type = QueryType::Undefined, $data = [], $status = 200, $extraHeaders = [])
     {
-        if($type != QueryType::Undefined){
+        if($type != QueryType::Undefined && $type != null){
             switch($type) {
                 case QueryType::Create:
                     $data = ["message" => "Created Successfully"];
