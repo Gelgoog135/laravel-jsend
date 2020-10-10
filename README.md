@@ -1,8 +1,8 @@
 # laravel-jsend
 
-[![Latest Stable Version](https://poser.pugx.org/shalvah/laravel-jsend/v/stable)](https://packagist.org/packages/shalvah/laravel-jsend)
-[![Total Downloads](https://poser.pugx.org/shalvah/laravel-jsend/downloads)](https://packagist.org/packages/shalvah/laravel-jsend)
-[![Build Status](https://travis-ci.com/shalvah/laravel-jsend.svg?branch=master)](https://travis-ci.com/shalvah/laravel-jsend)
+[![Latest Stable Version](https://poser.pugx.org/gelgoog135/laravel-jsend/v/stable)](https://packagist.org/packages/gelgoog135/laravel-jsend)
+[![Total Downloads](https://poser.pugx.org/gelgoog135/laravel-jsend/downloads)](https://packagist.org/packages/gelgoog135/laravel-jsend)
+[![Build Status](https://travis-ci.com/gelgoog135/laravel-jsend.svg?branch=master)](https://travis-ci.com/gelgoog135/laravel-jsend)
 
 Simple helpers to generate [JSend-compliant](https://labs.omniti.com/labs/jsend) responses for your Laravel app
 
@@ -11,7 +11,7 @@ The [JSend specification](https://labs.omniti.com/labs/jsend) lays down some rul
 ## Installation
 Laravel 7 and above:
 ```bash
-composer require shalvah/laravel-jsend
+composer require gelgoog135/laravel-jsend
 ```
 
 Laravel 5.1 - 6.*:
